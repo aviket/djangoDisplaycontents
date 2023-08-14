@@ -1,33 +1,69 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+
 def home(request):
-    return render(request, 'home.html')
+    return render(request, "home.html")
+
 
 def about(request):
     return HttpResponse('<b style="color:red">About us</b>')
 
+
 def contact(request):
     return HttpResponse('<b style="color:red">Contact</b>')
+
 
 def testimonials(request):
     return HttpResponse('<b style="color:red">Testimonials</b>')
 
+
 def recent_projects(request):
     return HttpResponse('<b style="color:red">Recent Projects</b>')
 
+
 def contents(request, first_name, last_name, age):
     age = int(age)
+    greeting = ""
+    images = []
     if age > 0 and age <= 12:
-        message = f"Hello {first_name} {last_name},\nThese are contents suitable for kids"
+        greeting = (
+            f"Hello {first_name} {last_name},\nThese are contents suitable for kids"
+        )
+        images = [
+            "for_kid1.jpeg",
+            "for_kid2.jpeg",
+            "for_kid3.jpeg",
+        ]
     elif age > 12 and age <= 19:
-        message = f"Hello {first_name} {last_name},\nThese are contents suitable for teens"
+        greeting = (
+            f"Hello {first_name} {last_name},\nThese are contents suitable for teens"
+        )
+        images = [
+            "for_teen1.jpeg",
+            "for_teen2.jpeg",
+            "for_teen4.jpeg",
+            "for_teen4.jpeg",
+        ]
     elif age > 19 and age <= 58:
-        message = f"Hello {first_name} {last_name},\nThese are contents suitable for matured"
+        greeting = (
+            f"Hello {first_name} {last_name},\nThese are contents suitable for matured"
+        )
+        images = [
+            "for_mat1.jpeg",
+            "for_mat2.jpeg",
+            "for_mat3.jpeg",
+            "for_mat4.jpeg",
+        ]
     elif age > 58 and age <= 100:
-        message = f"Hello {first_name} {last_name},\nThese are contents suitable for senior citizens"
+        greeting = f"Hello {first_name} {last_name},\nThese are contents suitable for senior citizens"
+        images = [
+            "for_sinior1.jpeg",
+            "for_sinior2.jpeg",
+            "for_sinior3.jpeg",
+        
+        ]
     else:
-        message = f"Hello {first_name} {last_name},\nOh Gosh!!! You seem to be an Alien! No contents for you!"
-    
-    return HttpResponse(f'<b style="color:red">{message}</b>')
+        greeting = f"Hello {first_name} {last_name},\nOh Gosh!!! You seem to be an Alien! No contents for you!"
 
+    return render(request, "contents.html", {"greeting": greeting, "images": images})

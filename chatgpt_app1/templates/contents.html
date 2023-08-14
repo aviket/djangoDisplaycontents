@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contents</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item {
+            height: 400px; /* Fixed height */
+            width: 400px; /* Fixed width */
+            margin: 0 auto; /* Center horizontally */
+        }
+    
+        .carousel-item img {
+            height: 400px; /* Fixed height */
+            width: 400px; /* Fixed width */
+            display: block;
+            margin: auto; /* Center horizontally */
+        }
+        
+        .greeting-message {
+            width: 80%; /* 80% of viewport width */
+            margin: 0 auto; /* Center horizontally */
+            text-align: center; /* Center text */
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting-message">
+        <h1 style="color: red;">{{ greeting }}</h1>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 400px; margin: 0 auto;">
+        <ol class="carousel-indicators">
+            {% for image in images %}
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></li>
+            {% endfor %}
+        </ol>
+        <div class="carousel-inner">
+            {% for image in images %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{% static 'images/'|add:image %}" class="d-block w-100" alt="Image">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

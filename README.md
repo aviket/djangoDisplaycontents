@@ -1,0 +1,2 @@
+# djangoDisplaycontents
+Display Contents

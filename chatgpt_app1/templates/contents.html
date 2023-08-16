@@ -30,6 +30,41 @@
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/testimonials">Testimonials</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="/recent_projects">Recent Projects</a>
+              </li> 
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item"  href="/contents/John/Doe/10">View suitable for kids (John Doe, 10 years old)</a></li>
+                  <li><a class="dropdown-item" href="/contents/James/Smith/15">View suitable for teens (James Smith, 15 years old)</a></li>
+                  <li><a class="dropdown-item" href="/contents/Mary/Johnson/35">View suitable for matured (Mary Johnson, 35 years old)</a></li>
+                  <li><a class="dropdown-item" href="/contents/Thomas/Brown/65">View suitable for senior citizens (Thomas Brown, 65 years old)</a></li>
+                  <li><a class="dropdown-item" href="/contents/Alien/Unknown/150">View suitable for Alien (Alien Unknown, 150 years old)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
     <div class="greeting-message">
         <h1 style="color: red;">{{ greeting }}</h1>
     </div>

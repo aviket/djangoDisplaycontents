@@ -7,15 +7,16 @@ def home(request):
 
 
 def about(request):
-    return HttpResponse('<b style="color:red">About us</b>')
-
+    return render(request, 'about.html')
 
 def contact(request):
-    return HttpResponse('<b style="color:red">Contact</b>')
+    return render(request, 'contact.html')
+
 
 
 def testimonials(request):
-    return HttpResponse('<b style="color:red">Testimonials</b>')
+    return render(request, 'testmonials.html')
+
 
 
 def recent_projects(request):

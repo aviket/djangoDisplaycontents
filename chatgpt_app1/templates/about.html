@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Content Divs</title>
+</head>
+
+<body>
+  
+  <div class="container">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/testimonials">Testimonials</a>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="/recent_projects">Recent Projects</a>
+            </li> 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"  href="/contents/John/Doe/10">View suitable for kids (John Doe, 10 years old)</a></li>
+                <li><a class="dropdown-item" href="/contents/James/Smith/15">View suitable for teens (James Smith, 15 years old)</a></li>
+                <li><a class="dropdown-item" href="/contents/Mary/Johnson/35">View suitable for matured (Mary Johnson, 35 years old)</a></li>
+                <li><a class="dropdown-item" href="/contents/Thomas/Brown/65">View suitable for senior citizens (Thomas Brown, 65 years old)</a></li>
+                <li><a class="dropdown-item" href="/contents/Alien/Unknown/150">View suitable for Alien (Alien Unknown, 150 years old)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Header Div -->
+    <div class="row mb-4">
+      <div class="col">
+        <h1>About Content Creation</h1>
+        <p><div class="content-importance">
+          <p style="color: #2c3e50; font-weight: bold;">Content is the heartbeat of digital marketing, pulsating life into your online presence!</p>
+          <p style="font-style: italic; color: #8e44ad;">Captivating content turns casual readers into loyal followers; make every word count.</p>
+          <p style="color: #e74c3c; font-weight: bold;">From SEO to engagement, high-quality content is the golden key that unlocks success.</p>
+          <p style="font-style: italic; color: #2980b9;">Words have power; wield them wisely through impactful content that resonates.</p>
+          <p style="color: #16a085; font-weight: bold;">Content isn't just text; it's a conversation, a connection, a chance to inspire.</p>
+          <p style="font-style: italic; color: #f39c12;">In the digital age, content is king; rule wisely with creativity and relevance.</p>
+          <p style="color: #c0392b; font-weight: bold;">Your story matters; let compelling content be the voice that shouts it to the world.</p>
+      </div>
+      
+        </p>
+      </div>
+    </div>
+
+    <!-- First Div -->
+    <div class="row align-items-center mb-4">
+      <div class="col-sm-6">
+        <img src="{% static 'aboutus/woman-photographer.png' %}" alt="Image" class="img-fluid">
+      </div>
+      <div class="col-sm-6">
+        <div><ul>
+          <li>Visual Storytelling: Communicates messages and emotions through imagery.</li>
+          <li>Brand Identity: Enhances brand recognition with consistent visual aesthetics.</li>
+          <li>Engagement: Attracts and holds the viewer's attention across various platforms.</li>
+          <li>Quality and Professionalism: Reflects a high standard and positive brand perception.</li>
+          <li>Customization: Tailors imagery to fit specific campaigns or themes.</li>
+          <li>Supporting Content: Complements and enriches written content.</li>
+          <li>SEO Benefits: Contributes to search engine optimization with properly optimized images.</li>
+          <li>Multi-platform Usage: Provides cohesive visual messaging across media.</li>
+          <li>E-commerce Impact: Enhances online retail through high-quality product photography.</li>
+          <li>Artistic Expression: Combines functionality with creative visual expression.</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Div -->
+    <div class="row align-items-center mb-4">
+      <div class="col-sm-6">
+        <div>
+          About Email marketing
+          <ul>
+            <li>Targeted Communication: Enables businesses to send messages to specific audience segments.</li>
+            <li>Cost-Effective: Often more affordable compared to traditional marketing channels.</li>
+            <li>Customizable Content: Offers personalization to enhance the reader's experience.</li>
+            <li>Measurable: Allows tracking of key metrics like open rates and click-through rates.</li>
+            <li>Lead Generation: Powerful tool for nurturing prospects and encouraging desired actions.</li>
+            <li>Brand Awareness: Builds brand recognition through consistent and relevant communication.</li>
+            <li>Customer Retention: Encourages repeat business through ongoing engagement.</li>
+            <li>Compliance and Regulations: Requires adherence to rules such as the CAN-SPAM Act.</li>
+            <li>Integration with Other Channels: Can be coordinated with other marketing strategies.</li>
+            <li>Accessibility: Offers immediate and wide reach, accessible on various devices.</li>
+          </ul>
+
+
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <img src="{% static 'aboutus/email-marketing.png' %}" alt="Image" class="img-fluid">
+      </div>
+    </div>
+
+    <!-- Third Div -->
+    <div class="row align-items-center mb-4">
+      <div class="col-sm-6">
+        <img src="{% static 'aboutus/writer.jpg' %}" alt="Image" class="img-fluid">
+      </div>
+      <div class="col-sm-6">
+        <div>
+          <ul>
+            <li>Content Writing Tailors Messages: It focuses on creating specific, targeted content that speaks to a
+              particular audience or market segment.</li>
+            <li>Search Engine Optimization: Incorporating SEO strategies like keywords and meta tags helps in ranking
+              content higher on search engines.</li>
+            <li>Engagement: Well-written content engages readers, encouraging them to spend more time on the page and
+              take desired actions.</li>
+            <li>Brand Voice: Content writing helps in conveying the brand's voice and values, building trust and
+              recognition.</li>
+            <li>Informative: Quality content writing educates the readers, offering valuable insights, instructions, or
+              solutions.</li>
+            <li>Conversion Driven: Effective content writing aims to convert readers into customers by persuading them
+              to make a purchase or subscribe.</li>
+            <li>Multi-platform: Content can be tailored for various platforms such as websites, blogs, social media, and
+              more.</li>
+            <li>Collaboration with Design: It works hand-in-hand with visual elements like graphics and layout to create
+              a cohesive user experience.</li>
+            <li>Continuously Evolving: Content writing adapts to changes in industry trends, customer needs, and
+              technological advancements.</li>
+            <li>Creativity and Originality: Content writing requires creativity to produce original and compelling
+              content that stands out from the crowd.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
